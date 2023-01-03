@@ -81,7 +81,7 @@ def water_color_effect(decode_array_to_img):
 
 def invert(decode_array_to_img):
     invert_effect = cv2.bitwise_not(decode_array_to_img)
-    status ,output_img = cv2.imdecode('.PNG',invert_effect)
+    status ,output_img = cv2.imencode('.PNG',invert_effect)
     return output_img
 
 def HDR(decode_array_to_img):
