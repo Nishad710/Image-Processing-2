@@ -13,6 +13,7 @@ def upload_form():
 
 @app.route('/', methods=['POST'])
 def upload_image():
+    operation_selection = request.form['image_type_selection']
     image_file = request.files['file']
     filename = secure_filename(image_file.filename)
     reading_file_data = image_file.read()
